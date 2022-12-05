@@ -23,8 +23,23 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("org.springframework.cloud:spring-cloud-starter")
+//    implementation("org.springframework.cloud:spring-cloud-starter")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
+
+    implementation (platform("io.micrometer:micrometer-tracing-bom:latest.release"))
+    implementation ("io.micrometer:micrometer-tracing")
+    implementation("io.micrometer:micrometer-tracing-bridge-brave")
+
+    implementation("io.zipkin.reporter2:zipkin-reporter-brave")
+    // https://mvnrepository.com/artifact/com.github.loki4j/loki-logback-appender
+    implementation("com.github.loki4j:loki-logback-appender:1.3.2")
+
+
+
+
 }
 
 dependencyManagement {
